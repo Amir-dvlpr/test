@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body_block %}
+ 
+<hr>
+
+
+    <form method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="sumbit">
+    </form>
+ 
+{% endblock %}

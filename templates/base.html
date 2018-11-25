@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>first_app</title>
+    <link rel="stylesheet" href={% static "css/site.css" %} />
+</head>
+<body>
+    <h1> Hello IAM PYTHON DJANGO</h1>
+    <img src={% static "images/90.jpg" %} >
+
+    <table>
+        <thead>
+            <td>Firname</td>
+            <td>Lastname</td>
+            <td>Email</td>
+        </thead>
+        <tbody>
+            {% for i in users %}
+            <tr>
+                <td>{{ i.first_name }}</td>
+                <td>{{ i.last_name }} </td>
+                <td>{{ i.email }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'admin:index' %}" >link to admin</a>
+   
+    <a href="{% url 'first_app:index' %}">link to other</a>
+ 
+     {% block body_block %}
+
+     {% endblock %}
+
+</body>
+</html>

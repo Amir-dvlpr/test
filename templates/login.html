@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body_block %}
+
+<form action={% url 'first_app:login_user' %} method="POST">
+    <label name="username">username:</label>
+    <input type="text" name="username" placeholder="username">
+
+    <label name="password">password:</label>
+    <input type="password" name="password" placeholder="password">
+
+    <input type="submit" value="submit">
+</form>
+
+{% endblock %}
